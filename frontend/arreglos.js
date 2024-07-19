@@ -1,36 +1,42 @@
-//definir un arreglo de 
-//nombres de productos
-const nombres = ["Lapiz HB","Resaltador","Borrador de nata"];
+//definir un arreglo de
+//nombres de producto
+const nombres = ["Lapiz HB", "Resaltador", "Borrador de nata", 8876454, true, null, undefined ];
 //agregar elementos al arreglo:
-nombres[3] = "Micropuntas"
+nombres[3] = "Micropunta"
 console.table(nombres);
 console.log(nombres[1])
-//agregar elemento al final:
+//arreglar elemento al final:
 nombres.push("Corrector");
 
-//agregar elementos al principio:
-nombres.unshift("borrador miga de pan")
+//agregar elemnto al principio
+nombres.unshift("Borrador miga de pan")
 
 //eliminar elementos de un arreglo
-delete nombres[3]
+delete nombres[3];
 
-//eliminar elemento del final
+//eliminar elementos de final:
 nombres.pop();
 
 
-//elimiar elementos del principio
+//eliminar elementos del principio:
 nombres.shift()
+
 console.table(nombres);
 
-for(let i=0 ; i<nombres.length ; i=i+1){
-        console.log(nombres[i])
+for( let i=0 ; i<nombres.length ; i=i+1 ){
+    console.log(nombres[i])
+
 }
 
-//Operador spread con arreglos
-
+//operador Spread con arreglos:
 const nombres2 = [
-    "transportador",
-    "Regla de 30cm",
+    "Transportador",
+    "Regla 30cm"
 ]
-const productos =[ ...nombres,nombres2]
-console.table(productos)
+
+let Productos = [...nombres, ...nombres2]
+const elemento = "compas"
+Productos = [...Productos, elemento] 
+const transportador = "transportador"
+Productos = [...Productos, transportador]
+console.table(Productos)
